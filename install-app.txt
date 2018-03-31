@@ -1,0 +1,24 @@
+### Instalação dos programas basicos
+#ngix installation
+apt-get update
+apt-get install nginx
+ufw app list
+ufw allow 'Nginx HTTP'
+ufw status
+
+#install nodejs
+cd ~
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+apt-get install nodejs
+apt-get install build-essential
+
+#install npm to control applications
+npm install -g pm2
+
+#avaliar se precisa ter mesmo este pacote
+pm2 startup systemd 
+
+#configurar a aplicação nodejs
+mkdir app
+
+
